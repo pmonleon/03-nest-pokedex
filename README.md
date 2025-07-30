@@ -41,8 +41,26 @@ http://localhost:3000/api/v2/seed
 [![GitHub](https://img.shields.io/badge/github-%23181717?style=flat-square&logo=github&logoColor=white)](https://github.com/nestjs/nest)
 [![GitHub](https://img.shields.io/badge/github-%23181717?style=flat-square&logo=github&logoColor=white)](https://github.com/nestjs/nest)
 
-
 ```bash
 
 yarn start:dev
+```
+
+## Production Build
+
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+## Notas
+
+Heroku redeploy sin cambios:
+
+```bash
+git commit --allow-empty -m "Tigger Heroku deploy"
+git push heroku <master|main>
 ```
