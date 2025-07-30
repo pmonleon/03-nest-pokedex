@@ -56,6 +56,10 @@ yarn start:dev
 docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
 
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
 ## Notas
 
 Heroku redeploy sin cambios:
